@@ -6,21 +6,6 @@ This repository is a curated collection of solutions to problems from [LeetCode]
 
 ---
 
-## 📂 Repository Structure
-
-LeetCode-GFG-TopicWise-Solutions/
-├── TopicName/
-│ ├── LeetCode_Number_&_QuestionTitile 
-│ ├── GFG_QuestionTitle
-│ └── ...
-├── ...
-│ 
-├── ...
-│   
-├── ...
-└── README.md
-
-
 - **Topic Folders**: Each folder corresponds to a specific topic (e.g., Binary Search, Dynamic Programming).
 - **Problem Files**: Each file within a topic folder contains the solution to a specific problem, named with a clear identifier (e.g., `LC34_First_and_Last_Position.java` for LeetCode problem 34).
 
@@ -50,7 +35,7 @@ LeetCode-GFG-TopicWise-Solutions/
 
 3. **Explore The Solution**:
 
-  Open any solution file to read the problem description, approach, and code.
+   Open any solution file to read the problem description, approach, and code.
 
 ---
 
