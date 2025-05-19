@@ -9,10 +9,13 @@ Feel free to check out my LeetCode Profile : [AseemJan](https://leetcode.com/u/A
 
 ---
 
+
 - **Topic Folders**: Each folder corresponds to a specific topic (e.g., Binary Search, Dynamic Programming).
 - **Problem Files**: Each file within a topic folder contains the solution to a specific problem, named with a clear identifier (e.g., `LC34_First_and_Last_Position.java` for LeetCode problem 34).
 
+
 ---
+
 
 ## 🧠 Features
 
@@ -24,7 +27,9 @@ Feel free to check out my LeetCode Profile : [AseemJan](https://leetcode.com/u/A
   - Well-commented code for clarity
 - **Scalability**: The structure is designed to accommodate new topics and problems without disrupting the existing organization.
 
+
 ---
+
 
 ## 🛠️ How to Use
 
@@ -41,6 +46,12 @@ Feel free to check out my LeetCode Profile : [AseemJan](https://leetcode.com/u/A
    Open any solution file to read the problem description, approach, and code.
 
 ---
+
+
+## 📄 License
+
+This repository is licensed under the [Creative Commons Attribution-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nd/4.0/). You are free to view, copy, clone, and pull the code for any purpose, but you may not modify or distribute modified versions of the code.
+
 
 
 ### 📌 Key Points:
