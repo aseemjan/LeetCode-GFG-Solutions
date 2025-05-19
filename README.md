@@ -46,8 +46,12 @@ This repository is a curated collection of solutions to problems from [LeetCode]
 - **No Contributions**: The repository is set up to prevent external contributions, ensuring that the content remains as you have curated it.
 - **License**: The chosen license allows others to view and use the content without making modifications, aligning with your preferences.
 
-If you need further assistance with repository settings or have other questions, feel free to ask!
-::contentReference[oaicite:0]{index=0}
+If you need further assistance with repository settings or have other questions, feel free to ask!:
+  1. Gmail - aseemjan7@gmail.com
+  2. LinkedIn - www.linkedin.com/in/aseem-jan
+
+
+
  
 
 
