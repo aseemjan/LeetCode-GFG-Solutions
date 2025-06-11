@@ -29,33 +29,33 @@ class Solution {
     public void nextPermutation(int[] nums) {
         int n = nums.length;
 
-        int golaIdx = -1;
+        int smallIdx = -1;
 
         // Step 1: Find the first decreasing index from the end
         for (int i = n - 1; i > 0; i--) {
             if (nums[i] > nums[i - 1]) {
-                golaIdx = i - 1;
+                smallIdx = i - 1;
                 break;  // Only the 'first' such index is required
             }
         }
 
         // Step 2: If we found such an index, swap it with the next greater element from the right
-        if (golaIdx != -1) {
-            int swapIdx = golaIdx;
+        if (smallIdx != -1) {
+            int swapIdx = smallIdx;
 
-            for (int j = n - 1; j >= golaIdx + 1; j--) {
-                if (nums[j] > nums[golaIdx]) {
+            for (int j = n - 1; j >= smallIdx + 1; j--) {
+                if (nums[j] > nums[smallIdx]) {
                     swapIdx = j;
                     break; // Only the 'first' such index is required
                 }
             }
 
             // Fix: pass indices to the swap method, not the values
-            swap(nums, golaIdx, swapIdx);
+            swap(nums, smallIdx, swapIdx);
         }
 
         // Step 3: Reverse the suffix
-        reverse(nums, golaIdx + 1, n - 1);
+        reverse(nums, smallIdx + 1, n - 1);
     }
 
     private void swap(int[] arr, int i, int j) {
