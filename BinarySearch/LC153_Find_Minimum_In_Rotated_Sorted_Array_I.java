@@ -29,6 +29,6 @@ class Solution{
                 r = mid;
             }
         }
-        return nums[r]; //nums[r] can also be returned since they'll be at the same index at the end;
+        return nums[r]; //nums[l] can also be returned since they'll be at the same index at the end;
     }
 }
