@@ -67,6 +67,15 @@ public class Solution {
             if (c != 0) return false;
         }
 
+        /*
+
+        // Can Also Use Lambda Operator i.e. - Arrays.Stream method
+
+            boolean allZeroes = Arrays.stream(count).allMatch(element -> element == 0);
+
+            return allZeroes;
+
+         */
         return true;
     }
 }
