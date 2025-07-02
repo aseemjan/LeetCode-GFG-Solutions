@@ -69,3 +69,46 @@ class Solution {
         return result;
     }
 }
+
+// Another way to code, Use switch case to store the Characters and return their indices.
+// These indices are the real values of those Characters stored in an array.
+// After this the logic is pretty much the same. Check (i + 1)th index and update result accorodingly.
+
+// This way we don't waste the extra 120 ints of space.
+// It may not be significant difference but its just another way.
+
+class Solution2 {
+    public int romanToInt(String s) {
+        int[] values = {1, 5, 10, 50, 100, 500, 1000}; // I, V, X, L, C, D, M
+
+        int result = 0;
+        int n = s.length();
+
+        for (int i = 0; i < n; i++) {
+            int currVal = values[getIndex(s.charAt(i))];
+
+            // If next value is larger, subtract current
+            if (i < n - 1 && currVal < values[getIndex(s.charAt(i + 1))]) {
+                result -= currVal;
+            } else {
+                result += currVal;
+            }
+        }
+
+        return result;
+    }
+
+    // Maps Roman characters to indices in the values array
+    private int getIndex(char c) {
+        switch (c) {
+            case 'I': return 0;
+            case 'V': return 1;
+            case 'X': return 2;
+            case 'L': return 3;
+            case 'C': return 4;
+            case 'D': return 5;
+            case 'M': return 6;
+            default: return -1; // Should never occur for valid input
+        }
+    }
+}
