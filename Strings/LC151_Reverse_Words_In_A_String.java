@@ -89,10 +89,7 @@ class Solution {
         StringBuilder sb = new StringBuilder();
 
         for (int i = tokens.length - 1; i >= 0; i--) {
-            sb.append(tokens[i]);
-            if (i > 0) {
-                sb.append(" ");
-            }
+            sb.append(tokens[i]).append(" ");
         }
 
         return sb.toString();
