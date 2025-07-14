@@ -92,6 +92,6 @@ class Solution {
             sb.append(tokens[i]).append(" ");
         }
 
-        return sb.toString();
+        return sb.toString().trim();
     }
 }
