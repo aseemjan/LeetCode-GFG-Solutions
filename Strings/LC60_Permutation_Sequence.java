@@ -27,44 +27,43 @@
 // Space Complexity: O(n)
 
 class Solution {
-    public String getPermutation(int n, int k) {
-        // Create a list of numbers from 1 to n
-        List<Integer> nums = new ArrayList<>();
-        for (int i = 1; i <= n; i++) {
-            nums.add(i);
+    public String getPermutation(int totalDigits, int targetPosition) {
+        // Initialize list of available digits [1, 2, ..., totalDigits]
+        List<Integer> availableDigits = new ArrayList<>();
+        for (int i = 1; i <= totalDigits; i++) {
+            availableDigits.add(i);
         }
 
-        // Precompute factorials up to (n - 1)!
-        // fact[i] will hold i! for quick access
-        int[] fact = new int[n];
-        fact[0] = 1;
-        for (int i = 1; i < n; i++) {
-            fact[i] = fact[i - 1] * i;
+        // Precompute factorials for positions 0 to totalDigits - 1
+        int[] factorial = new int[totalDigits];
+        factorial[0] = 1;
+        for (int i = 1; i < totalDigits; i++) {
+            factorial[i] = factorial[i - 1] * i;
         }
 
-        // Convert k to 0-based index to simplify calculations
-        k = k - 1;
+        // Convert to 0-based index for simpler math
+        targetPosition--;
 
-        StringBuilder sb = new StringBuilder();
+        // Use StringBuilder to build the result
+        StringBuilder result = new StringBuilder();
 
-        // Loop from n down to 1 because we are placing digits from left to right
-        // i.e., for position 1 → (n) choices, position 2 → (n-1) choices, ..., last position → 1 choice
-        for (int i = n; i >= 1; i--) {
-            // Determine which block of permutations the k-th one falls into
-            // Each block is of size (i-1)! and corresponds to a specific starting digit
-            int idx = k / fact[i - 1];
+        // Loop from totalDigits to 1 → filling from leftmost to rightmost digit
+        for (int digitsLeft = totalDigits; digitsLeft >= 1; digitsLeft--) {
+            // Determine which digit to pick by finding the correct block
+            int blockSize = factorial[digitsLeft - 1];
+            int indexToPick = targetPosition / blockSize;
 
-            // Append the selected digit to our result
-            sb.append(nums.get(idx));
+            // Add selected digit to result
+            result.append(availableDigits.get(indexToPick));
 
-            // Remove the used digit from the list (so we don't use it again)
-            nums.remove(idx);
+            // Remove selected digit from available list
+            availableDigits.remove(indexToPick);
 
-            // Update k to be the offset within the new block
-            k = k % fact[i - 1];
+            // Update targetPosition for the next digit (inside the new block)
+            targetPosition = targetPosition % blockSize;
         }
 
-        return sb.toString();
+        return result.toString();
     }
 }
 
